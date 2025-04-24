@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  aside {
+    width: 220px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  
+  nav a {
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #007acc;
+  }
+  
+  img.profile-photo {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
