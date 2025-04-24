@@ -1,91 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Pablo Cornejo</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      color: #333;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    header img {
-      max-width: 300px;
-      height: auto;
-      margin-left: 1rem;
-      border-radius: 8px;
-    }
-    nav {
-      margin-top: 2rem;
-    }
-    nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #007acc;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.8rem;
-      color: #aaa;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <img src="images/your-photo.jpg" alt="Profile photo" class="profile-photo">
 
-  <header>
-    <div>
-      <h1>Pablo Cornejo</h1>
-      <p>Machine Learning · Data Science · Astronomy</p>
+    <h1>Pablo Cornejo</h1>
+    <p>Machine Learning & Astronomy • Symbolic Regression • Researcher</p>
+
+    <nav>
+      <a href="about.html">About</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="cv.html">CV</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="social-links">
+      <a href="https://github.com/PabloCornejoM">GitHub</a> • 
+      <a href="https://linkedin.com/in/YOUR-LINK">LinkedIn</a>
     </div>
-    <img src="profile.jpg" alt="Pablo Cornejo" />
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>I’m currently working on research in symbolic regression using neural networks, and exploring astronomical data with ZTF. I'm based in Seattle, WA.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/PabloCornejoM/symbolic-regression-nn">Symbolic Regression with Neural Nets</a></li>
-      <li><a href="https://github.com/PabloCornejoM/ztf-lightcurves">ZTF Lightcurve Analysis</a></li>
-    </ul>
-  </section>
-
-  <section id="cv">
-    <h2>CV</h2>
-    <p><a href="cv.pdf">Download my CV</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Pablo Cornejo
-  </footer>
-
+  </div>
 </body>
 </html>
