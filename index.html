@@ -2,82 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pablo Cornejo</title>
   <style>
     body {
       font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #fff;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
       color: #333;
     }
     header {
-      text-align: center;
-      padding: 3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
     header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
+      max-width: 300px;
+      height: auto;
+      margin-left: 1rem;
+      border-radius: 8px;
     }
     nav {
-      text-align: center;
-      margin: 2rem 0;
+      margin-top: 2rem;
     }
     nav a {
-      margin: 0 1rem;
+      margin-right: 1rem;
       text-decoration: none;
       color: #007acc;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    section {
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
     footer {
-      text-align: center;
+      margin-top: 4rem;
       font-size: 0.8rem;
-      color: #888;
-      padding: 2rem 1rem;
+      color: #aaa;
+      text-align: center;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="profile.jpg" alt="Your Photo" />
-    <h1>Pablo Cornejo</h1>
-    <p>Data Science | Astronomy | Machine Learning</p>
+    <div>
+      <h1>Pablo Cornejo</h1>
+      <p>Machine Learning · Data Science · Astronomy</p>
+    </div>
+    <img src="profile.jpg" alt="Pablo Cornejo" />
   </header>
+
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <section id="about">
     <h2>About</h2>
-    <p>Write a short paragraph about yourself here. Keep it simple, just like Jake's page.</p>
+    <p>I’m currently working on research in symbolic regression using neural networks, and exploring astronomical data with ZTF. I'm based in Seattle, WA.</p>
   </section>
+
   <section id="projects">
     <h2>Projects</h2>
-    <p>List or describe some recent projects. You can link to GitHub or papers.</p>
+    <ul>
+      <li><a href="https://github.com/PabloCornejoM/symbolic-regression-nn">Symbolic Regression with Neural Nets</a></li>
+      <li><a href="https://github.com/PabloCornejoM/ztf-lightcurves">ZTF Lightcurve Analysis</a></li>
+    </ul>
   </section>
+
   <section id="cv">
     <h2>CV</h2>
     <p><a href="cv.pdf">Download my CV</a></p>
   </section>
+
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: your.email@example.com</p>
   </section>
+
   <footer>
     &copy; 2025 Pablo Cornejo
   </footer>
+
 </body>
 </html>
