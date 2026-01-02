@@ -2,38 +2,64 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Pablo Cornejo</title>
+  <title>Projects - Pablo Cornejo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <button class="theme-toggle">
+    <i class="fas fa-moon"></i>
+    <span>Theme</span>
+  </button>
+
   <div class="wrapper">
     <header>
         <h1><a href="index.html" style="color: #39c; text-decoration: none;">Pablo Cornejo</a></h1>
         <p>Machine Learning & Astronomy • Symbolic Regression • Graduate Student</p>
         <nav>
-            <p><a href="about.html" style="color: #39c; text-decoration: none;"><strong>About</strong><br><small>Bio & background</small></a></p>
-            <p><a href="projects.html" style="color: #39c; text-decoration: none;"><strong>Projects</strong><br><small>Code & research</small></a></p>
-            <p><a href="cv.html" style="color: #39c; text-decoration: none;"><strong>CV</strong><br><small>Resume</small></a></p>
-            <p><a href="contact.html" style="color: #39c; text-decoration: none;"><strong>Contact</strong><br><small>Get in touch</small></a></p>
+          <p><a href="about.html" style="color: #39c; text-decoration: none;"><strong>About</strong><br><small>Bio & background</small></a></p>
+          <p><a href="projects.html" style="color: #39c; text-decoration: none;"><strong>Projects</strong><br><small>Code & research</small></a></p>
+          <p><a href="cv.html" style="color: #39c; text-decoration: none;"><strong>CV</strong><br><small>Resume</small></a></p>
+          <p><a href="contact.html" style="color: #39c; text-decoration: none;"><strong>Contact</strong><br><small>Get in touch</small></a></p>
         </nav>
-        
-      
-      <p>
-        <a href="https://github.com/PabloCornejoM">GitHub</a><br>
-        <a href="www.linkedin.com/in/pablocornejom">LinkedIn</a>
-      </p>
+
+        <p>
+          <a href="https://github.com/PabloCornejoM" style="color: #39c; text-decoration: none;"><i class="fab fa-github"></i> GitHub</a><br>
+          <a href="https://www.linkedin.com/in/pablocornejom" style="color: #39c; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+
+        <img src="images/pc_image.jpeg" alt="Pablo Cornejo" class="profile-image">
     </header>
 
     <section>
-      <h1>Welcome</h1>
-      <p>This is the personal site of Pablo Cornejo. I'm interested in machine learning, astronomy, and symbolic regression.</p>
-      <!--<p><img src="images/your-photo.jpg" alt="Profile photo" width="300"></p>-->
+      <h1>Projects</h1>
+
+      <h2>Symbolic Regression via Neural Networks</h2>
+      <p><strong>Technologies:</strong> Python, PyTorch, Feature Selection</p>
+      <p>Initiated and led a research project focused on applying neural network architectures to symbolic regression problems. Developed a hybrid model that integrates neural networks with symbolic regression techniques to accurately fit complex mathematical expressions. Implemented a custom feature selection algorithm to enhance model efficiency and interpretability, resulting in improved regression accuracy and parsimony.</p>
+      <p><a href="https://github.com/PabloCornejoM"><i class="fab fa-github"></i> View on GitHub</a></p>
+
+      <hr>
+
+      <h2>Causality and GFlowNets for Brain Signal Recovery</h2>
+      <p><strong>Technologies:</strong> Python, GFlowNets, Signal Processing</p>
+      <p>Developing a novel approach utilizing GFlowNets to recover and denoise brain signals obtained from medical imaging methods such as EEG. Incorporating causality analysis to model and understand the underlying relationships within noisy brain signal data, enhancing the robustness of signal recovery. Collaborating with interdisciplinary teams to validate the model's performance.</p>
+
+      <hr>
+
+      <h2>Stamp Classifier for ALeRCE Broker</h2>
+      <p><strong>Technologies:</strong> Python, Jupyter Notebook, scikit-learn</p>
+      <p>Developed enhancements based on the paper "Alert Classification for the ALeRCE Broker System: The Real-time Stamp Classifier". Implemented a random rotation algorithm and conducted feature selection analysis to boost model performance by 15%. Addressed data imbalance by implementing advanced augmentation techniques, enhancing model robustness and SNe classification accuracy.</p>
+      <p><a href="https://github.com/PabloCornejoM"><i class="fab fa-github"></i> View on GitHub</a></p>
+
     </section>
 
     <footer>
       <p><small>Last updated April 2025</small></p>
     </footer>
   </div>
+
+  <script src="theme.js"></script>
 </body>
 </html>

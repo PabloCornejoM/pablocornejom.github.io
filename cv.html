@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Pablo Cornejo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .cv-download {
+      background: var(--link-color);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 20px 0;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    .cv-download:hover {
+      opacity: 0.8;
+      color: white;
+    }
+    .pdf-container {
+      margin: 20px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle">
+    <i class="fas fa-moon"></i>
+    <span>Theme</span>
+  </button>
+
+  <div class="wrapper">
+    <header>
+        <h1><a href="index.html" style="color: #39c; text-decoration: none;">Pablo Cornejo</a></h1>
+        <p>Machine Learning & Astronomy • Symbolic Regression • Graduate Student</p>
+        <nav>
+          <p><a href="about.html" style="color: #39c; text-decoration: none;"><strong>About</strong><br><small>Bio & background</small></a></p>
+          <p><a href="projects.html" style="color: #39c; text-decoration: none;"><strong>Projects</strong><br><small>Code & research</small></a></p>
+          <p><a href="cv.html" style="color: #39c; text-decoration: none;"><strong>CV</strong><br><small>Resume</small></a></p>
+          <p><a href="contact.html" style="color: #39c; text-decoration: none;"><strong>Contact</strong><br><small>Get in touch</small></a></p>
+        </nav>
+
+        <p>
+          <a href="https://github.com/PabloCornejoM" style="color: #39c; text-decoration: none;"><i class="fab fa-github"></i> GitHub</a><br>
+          <a href="https://www.linkedin.com/in/pablocornejom" style="color: #39c; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+
+        <img src="images/pc_image.jpeg" alt="Pablo Cornejo" class="profile-image">
+    </header>
+
+    <section>
+      <h1>Curriculum Vitae</h1>
+
+      <p>Graduate student in Electrical Engineering with strong interdisciplinary experience across machine learning, data analysis, and deep learning research. Currently conducting research on symbolic regression methods for astronomical datasets at the University of Washington.</p>
+
+      <a href="files/cv_pc_ml (2).pdf" class="cv-download" download>
+        <i class="fas fa-download"></i> Download CV (PDF)
+      </a>
+
+      <div class="pdf-container">
+        <iframe src="files/cv_pc_ml (2).pdf" type="application/pdf">
+          <p>Your browser doesn't support PDF viewing. Please <a href="files/cv_pc_ml (2).pdf" download>download the PDF</a> to view it.</p>
+        </iframe>
+      </div>
+
+      <h2>Quick Summary</h2>
+
+      <h3>Education</h3>
+      <p>
+        <strong>Master of Science in Electrical Engineering</strong><br>
+        University of Chile, 2023 - 2025<br>
+        <em>Thesis: Symbolic Regression via Neural Networks for Scientific Discovery</em>
+      </p>
+      <p>
+        <strong>Bachelor of Science in Electrical Engineering</strong><br>
+        University of Chile, 2019 - 2023
+      </p>
+
+      <h3>Current Position</h3>
+      <p>
+        <strong>Research Assistant — Visiting Graduate Student</strong><br>
+        University of Washington, DiRAC Institute | Mar 2025 - Present<br>
+        Seattle, WA, USA
+      </p>
+
+      <h3>Technical Skills</h3>
+      <p>
+        <strong>Languages:</strong> Python, SQL, C++<br>
+        <strong>ML/DL:</strong> PyTorch, TensorFlow, scikit-learn, NumPy, Pandas<br>
+        <strong>Cloud & Tools:</strong> AWS, Docker, Git, GitHub
+      </p>
+
+    </section>
+
+    <footer>
+      <p><small>Last updated April 2025</small></p>
+    </footer>
+  </div>
+
+  <script src="theme.js"></script>
+</body>
+</html>

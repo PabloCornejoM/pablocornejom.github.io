@@ -1,0 +1,343 @@
+%-------------------------
+% Rezume, a latex resume template for developers
+% Author : Nanu Panchamurthy
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+
+% Hope this resume template helps you land an awesome job. If you found this helpful, please consider starring the github repo here, .
+%-------------------------
+
+
+
+%------------PACKAGES----------------
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
+
+\usepackage{titlesec} % provides an interface to sectioning commands i.e. custom elements
+
+\usepackage{color} % provides both foreground and background color management
+
+\usepackage{enumitem} % provides control over enumerate, itemize and description
+
+\usepackage{fancyhdr} % provides extensive facilities for constructing headers, footers and also controlling their use
+
+\usepackage{tabularx} % defines an environment tabularx, extension of "tabular" with an extra designator x, paragraph like column whose width automatically expands to fill the width of the environment
+
+\usepackage{latexsym} % provides mathematical symbols
+
+\usepackage{marvosym} % provides martin vogel's symbol font which contains various symbols
+
+\usepackage[empty]{fullpage} % sets margins to one inch and removes headers, footers etc..
+
+\usepackage[hidelinks]{hyperref} % removes color and shadow of hyperlinks
+
+\usepackage[normalem]{ulem} % provides "\ul" (uline) command which will break at line breaks
+
+\usepackage[english]{babel} % provides culturally determined typographical rules for wide range of languages
+%-----------------------------------------
+
+\input glyphtounicode % converts glyph names to unicode
+\pdfgentounicode=1 % ensures pdfs generated are ats readable
+
+%----------FONT OPTIONS-------------------
+\usepackage[default]{sourcesanspro} % uses the font source sans pro
+\urlstyle{same} % changes url font from default urlfont to font being used by the document
+%-----------------------------------------
+
+
+%----------MARGIN OPTIONS-----------------
+\pagestyle{fancy} % set page style to one configured by fancyhdr
+\fancyhf{} % clear all header and footer fields
+
+\renewcommand{\headrulewidth}{0in} % sets thickness of linerule under header to zero
+\renewcommand{\footrulewidth}{0in} % sets thickness of linerule over footer to zero
+
+\setlength{\tabcolsep}{0in} % sets thickness of column separator in tables to zero
+
+% origin of the document is one inch from the top and from and the left
+% oddsidemargin and evensidemargin both refer to the left margin
+% right margin is indirectly set using oddsidemargin
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\topmargin}{-0.5in}
+
+\addtolength{\textwidth}{1.0in} % sets width of text area in the page to one inch
+\addtolength{\textheight}{1.0in} % sets height of text area in the page to one inch
+
+\raggedbottom{} % makes all pages the height of current page, no extra vertical space added
+\raggedright{} % makes all pages the width of current page, no extra horizontal space added
+%------------------------------------------
+
+
+%--------SECTIONING COMMANDS---------
+% \titleformat{<command>}
+%   [<shape>]{<format>}{<label>}{<sep>}
+%     {<before-code>}[<after-code>]
+
+% command is the sectioning command to be redefined
+% shape is the style of the font; scshape stands for small caps style
+% format is the format to be applied to whole title- label and text; absent here
+% label defines the label
+% sep is the horizontal separation between label and title body
+% before-code is the code to be executed before
+% after-code is the code to be executed after
+
+\titleformat{\section}
+  {\scshape\large}{}
+    {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
+%-------------------------------------
+
+
+%--------REDEFINITIONS----------------
+% redefines the style of the bullet point
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% redefines the underline depth to 2pt
+\renewcommand{\ULdepth}{2pt}
+%-------------------------------------
+
+
+%--------CUSTOM COMMANDS--------------
+%\vspace{} defines a vertical space of given size, modifying this in custom commands can help stretch or shrink resume to remove or add content
+
+% resumeItem renders a bullet point
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+% commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
+\newcommand{\resumeSectionType}[3]{
+  \item\begin{tabular*}{0.96\textwidth}[t]{
+    p{0.25\linewidth}p{0.02\linewidth}p{0.71\linewidth}
+  }
+    \textbf{#1} & #2 & #3
+  \end{tabular*}\vspace{-2pt}
+}
+
+% resumeTrioHeading renders three elements in three columns with second element being italicized and first element bolded, can be used for projects with three elements
+\newcommand{\resumeTrioHeading}[3]{
+  \item\small{
+    \begin{tabular*}{0.96\textwidth}[t]{
+      l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r
+    }
+      \textbf{#1} & \textit{#2} & #3
+    \end{tabular*}
+  }
+}
+
+% resumeQuadHeading renders four elements in a two columns with the second row being italicized and first element of first row bolded, can be used for experience and projects with four elements
+\newcommand{\resumeQuadHeading}[4]{
+  \item
+  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+% resumeQuadHeadingChild renders the second row of resumeQuadHeading, can be used for experience if different roles in the same company need to added
+\newcommand{\resumeQuadHeadingChild}[2]{
+  \item
+  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\small#1} & {\small#2} \\
+  \end{tabular*}
+}
+
+% commands to start and end itemization of resumeQuadHeading, lefmargin for left indent of 0.15in for resumeItems
+\newcommand{\resumeHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+%-------------------------------------------
+
+
+%__________________RESUME____________________
+% You can rearrange sections in any order you may prefer
+\begin{document}
+
+%-----------CONTACT DETAILS------------------
+% Make sure all the details are correct, you can add more links in the first row of second column if needed
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Huge Pablo Cornejo \vspace{2pt}} & % row = 1, col = 1
+  Location: Santiago, RM, Chile \\ % row = 1, col = 2
+  %\href{https://jane-doe.com}{\uline{jane-doe.com}} $|$ % row = 2, col = 1
+  \href{https://www.linkedin.com/in/pablo-cornejo-b4495a223/}{\uline{LinkedIn}} $|$ % row = 2, col = 1
+  \href{https://github.com/PabloCornejoM}{\uline{GitHub}} $|$ % row = 2, col = 1
+  \href{https://leetcode.com/u/pableto/}{\uline{Leetcode}} & % row = 2, col = 1
+  Email: \href{mailto:pablo.cornejo01@gmail.com}{\uline{pablo.cornejo01@gmail.com}} $|$ % row = 2, col = 2
+  Mobile: +569 51797058 \\ % row = 2, col = 2
+\end{tabular*}
+%--------------------------------------------
+
+
+%-----------SUMMARY--------------------------
+% Keep this short, simple and straigth to point
+
+%-----------RESUMEN PROFESIONAL--------------------------
+
+\section{Professional Summary}
+\small{
+Graduate student in Electrical Engineering with strong interdisciplinary experience across machine learning, data analysis, and deep learning research. Skilled in building end-to-end ML pipelines, developing models for regression, classification, and signal processing, and deploying efficient code in Python and PyTorch. Experienced working in cross-functional teams, leading technical initiatives, and communicating complex concepts clearly. Passionate about applied machine learning, model interpretability, and designing scalable data solutions.
+}
+%--------------------------------------------
+
+\section{Technical Skills}
+  \resumeHeadingListStart{}
+  
+    \resumeSectionType{Languages}{:}{Python, SQL, C++}
+
+    \resumeSectionType{ML / DL Libraries}{:}{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas}
+
+    \resumeSectionType{Cloud \& MLOps}{:}{AWS, Docker, Git, GitHub}
+
+    \resumeSectionType{ML Techniques}{:}{Deep Learning, Model Training, Feature Engineering}
+
+    \resumeSectionType{Tools}{:}{Jupyter, VSCode, Linux}
+
+  \resumeHeadingListEnd{}
+
+%--------------------------------------------
+
+\section{Languages}
+  \resumeHeadingListStart{}
+
+    \resumeSectionType{Languages}{:}{Spanish (Native), English (Professional Proficiency, TOEFL iBT 100)}
+
+  \resumeHeadingListEnd{}
+
+
+
+%-----------EXPERIENCE-----------------------
+% Distill all your talking points to small bullet points which follow the pattern "challenge-action-result" for maximum efficiency. Try to quantify (use numbers) your points whenver possible, highlist words of importance
+
+\section{Experience}
+\resumeHeadingListStart{}
+
+  \resumeQuadHeading{Research Assistant — Visiting Graduate Student}{Mar 2025 -- Present}
+  {University of Washington, DiRAC Institute}{Seattle, WA, USA}
+    \resumeItemListStart{}
+      \resumeItem{Conducting research on symbolic regression methods for astronomical datasets under the supervision of Dr. Andrew Connolly (UW) and Dr. Pablo Estévez (U. of Chile).}
+      \resumeItem{Developing neural architectures and training workflows for functional discovery in astrophysical time-series.}
+    \resumeItemListEnd{}
+
+  \resumeQuadHeading{ML Research Assistant}{Mar 2023 -- Present}
+  {Computational Intelligence Lab, University of Chile}{Santiago, Chile}
+    \resumeItemListStart{}
+      \resumeItem{Thesis research on neural symbolic regression, focusing on generalization, robustness, and interpretability.}
+      \resumeItem{Participation in research projects applying ML to astronomy, medicine, causal theory learning, and mechanical optimization.}
+      \resumeItem{Contributed to cross-disciplinary collaborations and presented progress in lab seminars.}
+    \resumeItemListEnd{}
+
+  \resumeQuadHeading{Robotics Research Intern}{Dec 2022 -- Mar 2023}
+  {CACES Technologies}{Santiago, Chile}
+    \resumeItemListStart{}
+      \resumeItem{Designed and evaluated a new control architecture for industrial robotic manipulators.}
+      \resumeItem{Prototyped algorithms and tested performance in simulated robotic environments.}
+    \resumeItemListEnd{}
+
+  \resumeQuadHeadingChild{Robotics Developer Intern}{Dec 2021 -- Feb 2022}
+  {PAT Industrial Technologies}{}
+    \resumeItemListStart{}
+      \resumeItem{Worked on programming and integration of UR and ABB industrial robotic systems for automation solutions.}
+    \resumeItemListEnd{}
+
+\resumeHeadingListEnd{}
+
+
+%---------------------------------------------
+
+
+%-----------EDUCATION-------------------------
+% Mention your CGPA, if its good, in the first row of second column
+
+\section{Education}
+  \resumeHeadingListStart{}
+    \resumeQuadHeading{Master of Science in Electrical Engineering}{Santiago, Chile}
+    {University of Chile. Thesis: \textit{Symbolic Regression via Neural Networks for Scientific Discovery}}{2023 -- 2025}
+
+    \resumeQuadHeading{Bachelor of Science in Electrical Engineering}{Santiago, Chile}
+    {University of Chile}{2019 -- 2023}
+  \resumeHeadingListEnd{}
+
+
+%---------------------------------------------
+
+
+\section{Teaching Assistance}
+\resumeHeadingListStart{}
+
+\resumeTrioHeading{Lead Teaching Assistant — Computational Intelligence (2023, 2024)}{Python, ML, Optimization}{University of Chile}
+\resumeItemListStart{}
+\resumeItem{Led a team of 5 teaching assistants, coordinating tasks, designing assignments, and managing course logistics for 100+ students.}
+\resumeItem{Taught core ML concepts including neural networks, optimization, evolutionary algorithms, and hands-on model development in Python. Guided students through practical coding sessions, debugging, and model evaluation workflows.}
+\resumeItemListEnd{}
+
+\resumeTrioHeading{Teaching Assistant}{}{University of Chile}
+\resumeItemListStart{}
+\resumeItem{Experimental Physics (2024), Physics for Architects (2024), Applied Electromagnetism (2022--2023), Digital Systems (2022), Differential and Integral Calculus (2021), Innovation in Electrical Engineering Seminar (2024), Doctoral Seminar (2024), Professional Internship II (2024).}
+\resumeItemListEnd{}
+
+\resumeHeadingListEnd{}
+
+
+%-----------PROJECTS--------------------------
+% Use resumeQuadHeading if four elements are feasible (ex: demo video link), else use resumeTrioHeading. Keep the bullet points simple and concise and try to cover wide variety of skills you have used to build these projects
+
+\section{Projects}
+  \resumeHeadingListStart{}
+
+    \resumeTrioHeading{Symbolic Regression via Neural Networks}{Python, PyTorch, Feature Selection}{\href{}{\uline{Source Code}}}
+\resumeItemListStart{}
+  \resumeItem{Initiated and led a research project focused on applying neural network architectures to symbolic regression problems, specifically targeting Nguyen benchmarks.}
+  \resumeItem{Developed a hybrid model that integrates neural networks with symbolic regression techniques to accurately fit complex mathematical expressions.}
+  \resumeItem{Implemented a custom feature selection algorithm to enhance model efficiency and interpretability, resulting in a improvement in regression accuracy and parsimony.}
+  \resumeItem{Conducted comprehensive experiments and analysis, demonstrating the model’s ability to generalize across various symbolic regression tasks.}
+\resumeItemListEnd{}
+
+\resumeTrioHeading{Causality and GFlowNets for Brain Signal Recovery}{Python, GFlowNets, Signal Processing}{\href{}{\uline{Source Code}}}
+\resumeItemListStart{}
+  \resumeItem{Currently developing a novel approach utilizing GFlowNets to recover and denoise brain signals obtained from medical imaging methods such as EEG.}
+  \resumeItem{Incorporating causality analysis to model and understand the underlying relationships within noisy brain signal data, enhancing the robustness of signal recovery.}
+  \resumeItem{Designed and implemented algorithms aimed at effectively reducing noise and reconstructing high-fidelity brain signals, addressing significant challenges in medical signal processing.}
+  \resumeItem{Collaborating with interdisciplinary teams to validate the model’s performance.}
+\resumeItemListEnd{}
+
+    
+    
+    \resumeTrioHeading{Stamp Classifier}{Python, Jupyter Notebook, scikit-learn}{\href{}{\uline{Source Code}}}
+    \resumeItemListStart{}
+      \resumeItem{Developed and implemented enhancements based on the paper *Alert Classification for the ALeRCE Broker System: The Real-time Stamp Classifier*.}
+      \resumeItem{Implemented a random rotation algorithm and conducted feature selection analysis using scikit-learn to boost model performance by 15\%.}
+      \resumeItem{Collaborated with a team member to integrate improvements, resulting in a significant increase in SNe classification accuracy.}
+      \resumeItem{Addressed data imbalance by implementing advanced augmentation techniques, enhancing model robustness.}
+    \resumeItemListEnd{}
+
+  \resumeHeadingListEnd{}
+%--------------------------------------------
+
+
+%----------------OTHERS----------------------
+% You can add your acheivements, accolades, certifications etc. here.
+
+\section{Awards \& Honors}
+ \resumeHeadingListStart{}
+  
+  \resumeQuadHeading{University of Chile}{}%
+  {Tennis Athlete Distinction}{2021 -- 2023}{Awarded for outstanding participation and performance in the university tennis team.}
+
+  \resumeQuadHeading{}{}%
+  {Outstanding Student in Civil and Electrical Engineering}{2019 -- 2023}{Recognized for exceptional academic performance.}
+
+  \resumeQuadHeading{}{}%
+  {Best Teaching Assistant — Computational Intelligence}{2024}{Honored for excellence in teaching and course support.}
+
+ \resumeHeadingListEnd{}
+
+
+%--------------------------------------------
+
+\end{document}

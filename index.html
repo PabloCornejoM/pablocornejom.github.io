@@ -4,21 +4,29 @@
 
   <style>
     body {
-      background-image: url("images/galaxy.jpg");
+      background-color: black;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
+    }
+    .profile-photo {
+      border-radius: 50%;
+      object-fit: cover;
+      height: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
   </style>
 
   <meta charset="UTF-8">
   <title>Pablo Cornejo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <script src="background-randomizer.js"></script>
   <main style="max-width: 600px; margin: 80px auto; text-align: center;">
-    <img src="images/profile.jpg" alt="Profile photo" class="profile-photo" width="200">
+    <img src="images/pc_image.jpeg" alt="Profile photo" class="profile-photo" width="200">
     <h1 style="color: rgb(211, 211, 211);">Pablo Cornejo</h1>
     <p>Machine Learning & Astronomy • Symbolic Regression • Graduate Student</p>
 
@@ -30,8 +38,8 @@
     </nav>
 
     <p style="margin-top: 20px;">
-      <a href="https://github.com/PabloCornejoM">GitHub</a> •
-      <a href="https://linkedin.com/in/YOUR-LINK">LinkedIn</a>
+      <a href="https://github.com/PabloCornejoM" style="color: rgb(211, 211, 211);"><i class="fab fa-github"></i> GitHub</a> •
+      <a href="https://www.linkedin.com/in/pablocornejom" style="color: rgb(211, 211, 211);"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </p>
   </main>
   <footer>

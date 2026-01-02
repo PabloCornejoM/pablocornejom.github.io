@@ -13,7 +13,6 @@ This repository contains the source code for my personal website. The website is
 
 ### Prerequisites
 
-- A modern web browser
 - Basic knowledge of HTML and CSS
 
 ### Installation
@@ -29,6 +28,13 @@ cd pablocornejom
 ```
 
 3. Open `index.html` in your web browser to view the website locally.
+
+4. Or run locally via python: 
+```bash
+python -m http.server 8000
+```
+
+
 
 ## Development
 
@@ -57,7 +63,5 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Contact
 
 For any questions or suggestions, please feel free to reach out to me through:
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- Twitter: [@yourtwitterhandle](https://twitter.com/yourtwitterhandle)
-
+- Email: [pablo.cornejo01@gmail.com](mailto:pablo.cornejo01@gmail.com)
 

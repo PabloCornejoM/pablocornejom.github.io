@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <title>Pablo Cornejo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <button class="theme-toggle">
+    <i class="fas fa-moon"></i>
+    <span>Theme</span>
+  </button>
+
   <div class="wrapper">
     <header>
         <h1><a href="index.html" style="color: #39c; text-decoration: none;">Pablo Cornejo</a></h1>
@@ -18,22 +24,29 @@
           <p><a href="contact.html" style="color: #39c; text-decoration: none;"><strong>Contact</strong><br><small>Get in touch</small></a></p>
         </nav>
         
-      
-      <p>
-        <a href="https://github.com/PabloCornejoM">GitHub</a><br>
-        <a href="www.linkedin.com/in/pablocornejom">LinkedIn</a>
-      </p>
+        <p>
+          <a href="https://github.com/PabloCornejoM" style="color: #39c; text-decoration: none;"><i class="fab fa-github"></i> GitHub</a><br>
+          <a href="https://www.linkedin.com/in/pablocornejom" style="color: #39c; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+
+        <img src="images/pc_image.jpeg" alt="Pablo Cornejo" class="profile-image">
     </header>
 
+    
+    
+    
     <section>
-      <h1>Welcome</h1>
-      <p>This is the personal site of Pablo Cornejo. I'm interested in machine learning, astronomy, and symbolic regression.</p>
-      <!--<p><img src="images/your-photo.jpg" alt="Profile photo" width="300"></p>-->
+      <h1>Welcome, I'm Pablo</h1>
+      <p>I'm a master's student in electrical engineering at the University of Chile, where I also earned my bachelor's degree. Based in Santiago, I'm part of the Computational Intelligence Lab, working under the supervision of Professor Pablo Estévez.</p>
+      <p>My research focuses on symbolic regression with neural networks, blending deep learning, generative AI, and other areas of computational intelligence. I'm especially interested in how machine learning can uncover interpretable models and expand scientific understanding.</p>
+      <p>I'm excited about the potential of AI to make sense of complex data across different scientific fields, particularly in astronomy and other domains where interpretable models can drive scientific discovery.</p>
     </section>
 
     <footer>
       <p><small>Last updated April 2025</small></p>
     </footer>
   </div>
+
+  <script src="theme.js"></script>
 </body>
 </html>
